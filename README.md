@@ -1,56 +1,104 @@
-# Deyse Rodrigues — Massagens & bem-estar
+# Landing Page — Deyse Rodrigues Estética Integrativa
 
-Landing page em Vue 3 + TypeScript, construída no projeto Vite existente.
+Landing page comercial desenvolvida para apresentar os serviços de massagem da clínica Deyse Rodrigues Estética Integrativa, facilitar a comparação de preços e planos mensais e direcionar novos clientes para o atendimento pelo WhatsApp.
 
-## Executar
+> Projeto realizado como serviço freelancer. Esta é a primeira de duas landing pages contratadas pela cliente.
 
-```sh
+## Contexto do projeto
+
+A clínica precisava de uma página objetiva, elegante e fácil de compartilhar com clientes. A solução reúne os principais serviços, técnicas, durações, preços e informações de atendimento em uma experiência responsiva, com foco em clareza, confiança e conversão.
+
+Além de atender a uma necessidade real da cliente, este projeto faz parte da minha experiência profissional como **Web Designer e Desenvolvedor Front-end**, envolvendo decisões de identidade visual, experiência do usuário, responsividade e implementação.
+
+## Minha atuação
+
+- Planejamento da estrutura e da jornada de navegação.
+- Criação da identidade visual da landing page e do monograma `DR`.
+- Design responsivo para computadores, tablets e celulares.
+- Desenvolvimento da interface com Vue 3 e TypeScript.
+- Organização dos serviços, planos e preços para facilitar a comparação.
+- Criação das interações e animações com GSAP.
+- Integração com WhatsApp, Instagram e Google Maps.
+- Cuidados de acessibilidade, legibilidade e redução de movimento.
+
+## Principais recursos
+
+- Apresentação dos serviços com benefícios, técnicas e contraindicações.
+- Seleção dinâmica de serviço e duração.
+- Comparação entre sessão avulsa e planos de 2 ou 4 sessões mensais.
+- Cálculo e exibição da economia de cada plano.
+- Botões que abrem o WhatsApp com a escolha do cliente preenchida.
+- Carrossel com imagens reais dos atendimentos.
+- Seção explicando como funciona a primeira sessão.
+- Perguntas frequentes e formulário de dúvidas direcionado ao WhatsApp.
+- Horários de atendimento, endereço e mapa integrado.
+- Links para Instagram e atalhos flutuantes de contato.
+- Animações de entrada e progresso de rolagem com respeito à preferência por movimento reduzido.
+
+## Tecnologias
+
+- [Vue 3](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/)
+- [GSAP](https://gsap.com/)
+- CSS responsivo desenvolvido para o projeto
+
+## Executando localmente
+
+### Pré-requisitos
+
+- Node.js 20 ou superior
+- npm
+
+### Instalação
+
+```bash
+git clone https://github.com/nildo-santos/Lp-EstetitaDeyse.git
+cd Lp-EstetitaDeyse
 npm install
 npm run dev
 ```
 
-## Gerar versão para hospedagem
+O Vite exibirá no terminal o endereço da página para visualização local.
 
-```sh
+### Versão de produção
+
+```bash
 npm run build
 npm run preview
 ```
 
-O comando build verifica os tipos e gera o site estático em `dist/`. Publique o conteúdo dessa pasta em uma hospedagem estática. A prévia local não é um link público para clientes.
+O comando `npm run build` verifica os tipos e gera os arquivos otimizados na pasta `dist`.
 
-## Manutenção
+## Estrutura principal
 
-- `src/data.ts`: serviços, técnicas, durações, preços e mensagens do WhatsApp.
-- `src/components/ServiceCard.vue`: apresentação de cada serviço e seleção de duração.
-- `src/App.vue`: apresentação, comparação de planos, sobre, dúvidas e contato.
-- `src/style.css`: identidade visual, responsividade e movimento reduzido.
-- `src/assets/`: imagens fornecidas pelo cliente.
-- `.ui-craft/`: decisões de identidade e tokens.
+```text
+src/
+├── assets/                  # Fotografias e imagens do projeto
+├── components/
+│   ├── CareGallery.vue      # Galeria dos atendimentos
+│   ├── FirstVisit.vue       # Jornada da primeira sessão
+│   ├── QuestionForm.vue     # Formulário de dúvidas
+│   └── ServiceCard.vue      # Serviço, duração e preço
+├── App.vue                  # Estrutura principal da landing page
+├── data.ts                  # Serviços, preços e mensagens do WhatsApp
+├── main.ts                  # Inicialização da aplicação
+└── style.css                # Identidade visual e responsividade
+```
 
-Os planos são calculados a partir dos preços cadastrados, com total mensal, valor por sessão e economia contra sessões avulsas. Os links de WhatsApp preenchem a mensagem, sem enviá-la automaticamente. A seleção do serviço é preservada ao seguir seu link para os planos.
+## Decisões de experiência
 
-Animações de entrada, deslocamento da foto principal e progresso de rolagem usam GSAP e ScrollTrigger. O carrossel utiliza GSAP para navegar entre fotos, com suporte a toque, setas e teclado. A preferência por movimento reduzido desativa as animações de entrada e de deslocamento. Teclado, foco visível, menu móvel, textos alternativos e preferência por movimento reduzido estão contemplados. A fonte DM Sans usa Google Fonts e possui fallback local.
+Os preços e planos são atualizados conforme o serviço e a duração escolhidos. As mensagens do WhatsApp são preenchidas automaticamente com a opção selecionada, mas o envio final permanece sob controle do cliente.
 
-## Conteúdo a confirmar antes da publicação
+A interface inclui navegação por teclado, foco visível, textos alternativos, controles com identificação acessível e adaptação para pessoas que preferem menos movimento.
 
-- Foi usado o bairro **Engenho de Dentro**, conforme o briefing mais recente. O link antigo de Maps do projeto de referência cita **Cachambi**; confirme com a clínica.
-- Não foram presumidos parcelamento, validade dos planos, cancelamento, horários de funcionamento ou regras de remarcação. A página orienta combinar esses pontos pelo WhatsApp.
-- As descrições não prometem cura ou resultados garantidos. As técnicas complementares dependem de avaliação individual.
+## Status
 
-## Referências de design consultadas
+**Landing page 1 de 2 — desenvolvimento concluído.**
 
-- https://github.com/educlopez/ui-craft
-- https://github.com/dickwu/apple-design-skill
-- https://github.com/uxuiprinciples/agent-skills
-- https://github.com/dembrandt/dembrandt-skills
+O projeto poderá continuar recebendo ajustes de conteúdo e preparação para hospedagem conforme a necessidade da cliente.
 
-Aplicadas à hierarquia, consistência visual, informações progressivas, controles acessíveis e adaptação de layout. Não foi necessária a instalação dos pacotes nem o uso de APIs pagas.
+## Desenvolvedor
 
-## Atualizações de interação
-
-- Formulário de dúvidas exige nome e mensagem, rejeita campos vazios ou só com espaços e abre o WhatsApp com ambos preenchidos. O envio final é realizado pela pessoa no WhatsApp; nenhum dado é salvo no site.
-- Técnicas: apenas um painel pode ficar aberto, e a altura do outro card é preservada.
-- Instagram: navegação, galeria, contato, rodapé e atalho flutuante.
-- Logo vetorial dourada em public/dr-monogram.svg.
-- GSAP: https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/ e https://gsap.com/docs/v3/Plugins/ScrollTrigger/
+Desenvolvido por [nildo-santos](https://github.com/nildo-santos) como projeto freelancer de Web Design e Desenvolvimento Front-end.
 
