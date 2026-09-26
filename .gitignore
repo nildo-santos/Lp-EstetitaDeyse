@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .ui-craft
+/publicar-site/
+/LandPageDeyse-publicacao.zip
 
 # Editor directories and files
 .vscode/*
